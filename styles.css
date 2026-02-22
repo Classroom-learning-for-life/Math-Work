@@ -1,3 +1,4 @@
+/* Basic styling */
 body {
   margin: 0;
   padding: 25px;
@@ -11,7 +12,12 @@ body {
   color: #5C6AC4;
 }
 
-/* LOCK SCREEN */
+/* HIDE MAIN CONTENT UNTIL UNLOCK */
+.hidden {
+  display: none;
+}
+
+/* LOCK SCREEN STYLING */
 #lockScreen {
   position: fixed;
   inset: 0;
