@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>New Tab</title>
-  <!-- Link to external CSS -->
+  <title>Games!</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,67 +16,77 @@
   <div id="resetLogin">Reset Saved Login</div>
 </div>
 
-<header>
-  <h1>Games!</h1>
-</header>
+<!-- MAIN CONTENT -->
+<div id="mainContent" class="hidden">
 
-<section>
-  <ul>
-    <li><a href="https://newunblockedgames.gitlab.io/" target="_blank">NUBG</a></li>
-    <li><a href="https://ruihq.github.io/FNAF2/" target="_blank">FNAF 2</a></li>
-    <li><a href="https://history.surf/" target="_blank"><strong>All</strong> Bros Games</a></li>
-    <li><a href="https://sites.google.com/view/cyberlabs/gmes/bitlife" target="_blank">BitLife (and others)</a></li>
-    <li><a href="https://delursys32.github.io/sandboxelsunblocked/" target="_blank">Sandboxels</a></li>
-    <li><a href="https://leoproductionsalt-glitch.github.io/buckshot_roulette/" target="_blank">Buckshot Roulette</a></li>
-    <li><a href="https://leoproductionsalt-glitch.github.io/Hallow_Knight/" target="_blank">Hallow Knight</a></li>
-    <li><a href="https://sites.google.com/view/scholarvision/movies" target="_blank">Movies!</a></li>
-  </ul>
-</section>
+  <header>
+    <h1>Games!</h1>
+  </header>
 
-<section>
-  <h2>Google Sites</h2>
-  <ul>
-    <li><a href="https://sites.google.com/classrooms.management/view/" target="_blank">Google Site 1</a></li>
-    <li><a href="https://sites.google.com/classroom.center/view/home" target="_blank">Google Site 2</a></li>
-    <li><a href="https://sites.google.com/site/unblockedgame67/home" target="_blank">Google Site 3</a></li>
-    <li><a href="https://sites.google.com/site/unblockedgamestop" target="_blank">Google Site 4</a></li>
-    <li><a href="https://sites.google.com/site/unblockedwtf/games" target="_blank">Google Site 5</a></li>
-    <li><a href="https://www.youtube.com/watch?v=Aq5WXmQQooo" target="_blank">Google Site 6</a></li>
-    <li><a href="https://sites.google.com/classroom.center/view/" target="_blank">Google Site Backup</a></li>
-  </ul>
-</section>
+  <section>
+    <ul>
+      <li><a href="https://newunblockedgames.gitlab.io/" target="_blank">NUBG</a></li>
+      <li><a href="https://ruihq.github.io/FNAF2/" target="_blank">FNAF 2</a></li>
+      <li><a href="https://history.surf/" target="_blank"><strong>All</strong> Bros Games</a></li>
+      <li><a href="https://sites.google.com/view/cyberlabs/gmes/bitlife" target="_blank">BitLife (and others)</a></li>
+      <li><a href="https://delursys32.github.io/sandboxelsunblocked/" target="_blank">Sandboxels</a></li>
+      <li><a href="https://leoproductionsalt-glitch.github.io/buckshot_roulette/" target="_blank">Buckshot Roulette</a></li>
+      <li><a href="https://leoproductionsalt-glitch.github.io/Hallow_Knight/" target="_blank">Hallow Knight</a></li>
+      <li><a href="https://sites.google.com/view/scholarvision/movies" target="_blank">Movies!</a></li>
+    </ul>
+  </section>
 
-<section class="pickle">
-  <a href="https://dn.ht/picklecat/" target="_blank">PICKLE CAT</a>
-</section>
+  <section>
+    <h2>Google Sites</h2>
+    <ul>
+      <li><a href="https://sites.google.com/classrooms.management/view/" target="_blank">Google Site 1</a></li>
+      <li><a href="https://sites.google.com/classroom.center/view/home" target="_blank">Google Site 2</a></li>
+      <li><a href="https://sites.google.com/site/unblockedgame67/home" target="_blank">Google Site 3</a></li>
+      <li><a href="https://sites.google.com/site/unblockedgamestop" target="_blank">Google Site 4</a></li>
+      <li><a href="https://sites.google.com/site/unblockedwtf/games" target="_blank">Google Site 5</a></li>
+      <li><a href="https://www.youtube.com/watch?v=Aq5WXmQQooo" target="_blank">Google Site 6</a></li>
+      <li><a href="https://sites.google.com/classroom.center/view/" target="_blank">Google Site Backup</a></li>
+    </ul>
+  </section>
 
-<footer>Made by Leo and ChatGPT</footer>
+  <section class="pickle">
+    <a href="https://dn.ht/picklecat/" target="_blank">PICKLE CAT</a>
+  </section>
+
+  <footer>Made by Leo and ChatGPT</footer>
+</div>
 
 <script>
-const correctPassword = "math"; // change password if needed
+const correctPassword = "leo123"; // change this
 
-// Check if already logged in
+const lockScreen = document.getElementById("lockScreen");
+const mainContent = document.getElementById("mainContent");
+const passwordInput = document.getElementById("passwordInput");
+const unlockBtn = document.getElementById("unlockBtn");
+
+// Check localStorage
 if (localStorage.getItem("siteUnlocked") === "true") {
-  document.getElementById("lockScreen").style.display = "none";
+  lockScreen.style.display = "none";
+  mainContent.classList.remove("hidden");
 }
 
-document.getElementById("unlockBtn").addEventListener("click", function() {
-  const entered = document.getElementById("passwordInput").value;
-  if (entered === correctPassword) {
+// Unlock function
+function unlockSite() {
+  if (passwordInput.value === correctPassword) {
     localStorage.setItem("siteUnlocked", "true");
-    document.getElementById("lockScreen").style.display = "none";
+    lockScreen.style.display = "none";
+    mainContent.classList.remove("hidden");
   } else {
     alert("Wrong password!");
   }
+}
+
+unlockBtn.addEventListener("click", unlockSite);
+passwordInput.addEventListener("keypress", function(e) {
+  if (e.key === "Enter") unlockSite();
 });
 
-document.getElementById("passwordInput").addEventListener("keypress", function(e) {
-  if (e.key === "Enter") {
-    document.getElementById("unlockBtn").click();
-  }
-});
-
-// Reset saved login
+// Reset login
 document.getElementById("resetLogin").addEventListener("click", function() {
   localStorage.removeItem("siteUnlocked");
   alert("Saved login cleared. Refresh page.");
