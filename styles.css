@@ -1,6 +1,129 @@
-body{
+body {
+  margin: 0;
   padding: 25px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  overflow-x: hidden;
 }
+
 .title {
-	color: #5C6AC4;
+  color: #5C6AC4;
+}
+
+/* LOCK SCREEN */
+#lockScreen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #000000, #111);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+#lockScreen h2 {
+  margin-bottom: 20px;
+  color: #00f7ff;
+  text-shadow: 0 0 12px #00f7ff;
+}
+
+#passwordInput {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#unlockBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #00f7ff;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#unlockBtn:hover {
+  box-shadow: 0 0 15px #00f7ff;
+}
+
+#resetLogin {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #888;
+  cursor: pointer;
+}
+
+header {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px #00f7ff;
+}
+
+h2 {
+  margin-top: 0;
+  color: #00f7ff;
+  text-shadow: 0 0 8px #00f7ff;
+}
+
+section {
+  background: rgba(255, 255, 255, 0.08);
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 12px 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px 14px;
+  display: block;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+a:hover {
+  background: rgba(0, 247, 255, 0.2);
+  box-shadow: 0 0 15px #00f7ff;
+  transform: translateX(6px);
+}
+
+.pickle {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #7CFF00;
+  text-shadow: 0 0 12px #7CFF00;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.7;
 }
