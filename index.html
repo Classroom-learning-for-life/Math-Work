@@ -56,6 +56,13 @@ body {
   box-shadow: 0 0 15px #00f7ff;
 }
 
+#resetLogin {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #888;
+  cursor: pointer;
+}
+
 header {
   text-align: center;
   padding: 30px 20px;
@@ -109,14 +116,6 @@ a:hover {
   transform: translateX(6px);
 }
 
-hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(to right, transparent, #00f7ff, transparent);
-  margin: 40px auto;
-  max-width: 500px;
-}
-
 .pickle {
   text-align: center;
   font-size: 1.6rem;
@@ -140,6 +139,7 @@ footer {
   <h2>Enter Password</h2>
   <input type="password" id="passwordInput" placeholder="Password">
   <button id="unlockBtn">Unlock</button>
+  <div id="resetLogin">Reset Saved Login</div>
 </div>
 
 <header>
@@ -153,11 +153,8 @@ footer {
     <li><a href="https://history.surf/" target="_blank"><strong>All</strong> Bros Games</a></li>
     <li><a href="https://sites.google.com/view/cyberlabs/gmes/bitlife" target="_blank">BitLife (and others)</a></li>
     <li><a href="https://delursys32.github.io/sandboxelsunblocked/" target="_blank">Sandboxels</a></li>
-
-    <!-- NEW GAMES ADDED HERE -->
     <li><a href="https://leoproductionsalt-glitch.github.io/buckshot_roulette/" target="_blank">Buckshot Roulette</a></li>
     <li><a href="https://leoproductionsalt-glitch.github.io/Hallow_Knight/" target="_blank">Hallow Knight</a></li>
-
     <li><a href="https://sites.google.com/view/scholarvision/movies" target="_blank">Movies!</a></li>
   </ul>
 </section>
@@ -184,9 +181,15 @@ footer {
 <script>
 const correctPassword = "Math";
 
+// Check if already logged in
+if (localStorage.getItem("siteUnlocked") === "true") {
+  document.getElementById("lockScreen").style.display = "none";
+}
+
 document.getElementById("unlockBtn").addEventListener("click", function() {
   const entered = document.getElementById("passwordInput").value;
   if (entered === correctPassword) {
+    localStorage.setItem("siteUnlocked", "true");
     document.getElementById("lockScreen").style.display = "none";
   } else {
     alert("Wrong password!");
@@ -197,6 +200,12 @@ document.getElementById("passwordInput").addEventListener("keypress", function(e
   if (e.key === "Enter") {
     document.getElementById("unlockBtn").click();
   }
+});
+
+// Reset saved login
+document.getElementById("resetLogin").addEventListener("click", function() {
+  localStorage.removeItem("siteUnlocked");
+  alert("Saved login cleared. Refresh page.");
 });
 </script>
 
