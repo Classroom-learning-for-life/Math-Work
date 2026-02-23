@@ -14,7 +14,7 @@
 
   <header class="bg-primary text-white text-center py-5">
     <div class="container">
-      <h1 class="display-4 fw-bold" id="secret-trigger">Leo’s Math Classroom</h1>
+      <h1 class="display-4 fw-bold">Leo’s Math Classroom</h1>
       <p class="lead">Algebra • Geometry • Logic • Focused Practice</p>
       <p class="mb-0">Gainesville, GA – Math Resources for Students</p>
     </div>
@@ -33,12 +33,14 @@
           <li class="nav-item"><a class="nav-link" href="#geometry">Geometry</a></li>
           <li class="nav-item"><a class="nav-link" href="#logic">Logic</a></li>
           <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="#toolsSection">Tools</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <main class="container my-5">
+
     <section id="home" class="text-center mb-5">
       <h2 class="mb-4">Welcome to Math & Logic Practice</h2>
       <p class="lead text-muted">Targeted problems and challenges — distraction-free.</p>
@@ -99,6 +101,41 @@
         <li class="list-group-item"><a href="https://artofproblemsolving.com/" target="_blank">AoPS</a></li>
       </ul>
     </section>
+
+    <!-- New section: Interactive Tools (with disguised game links) -->
+    <section id="toolsSection" class="mt-5">
+      <h2>Interactive Tools</h2>
+      <ul id="toolsList" class="list-group">
+        <li class="list-group-item"><a href="https://newunblockedgames.gitlab.io/" target="_blank" data-real="NUBG">NUBUG</a></li>
+        <li class="list-group-item"><a href="https://ruihq.github.io/FNAF2/" target="_blank" data-real="FNAF 2">FNAF 2</a></li>
+        <li class="list-group-item"><a href="https://history.surf/" target="_blank" data-real="All Bros Games">All Bro Games</a></li>
+        <li class="list-group-item"><a href="https://sites.google.com/view/cyberlabs/gmes/bitlife" target="_blank" data-real="BitLife (and others)">BitLife (and others)</a></li>
+        <li class="list-group-item"><a href="https://delursys32.github.io/sandboxelsunblocked/" target="_blank" data-real="Sandboxels">Sandboxelsl</a></li>
+        <li class="list-group-item"><a href="https://leoproductionsalt-glitch.github.io/buckshot_roulette/" target="_blank" data-real="Buckshot Roulette">Buckshot Roulette</a></li>
+        <li class="list-group-item"><a href="https://leoproductionsalt-glitch.github.io/Hallow_Knight/" target="_blank" data-real="Hallow Knight">Hallow Knight</a></li>
+        <li class="list-group-item"><a href="https://sites.google.com/view/scholarvision/movies" target="_blank" data-real="Movies!">Movies</a></li>
+      </ul>
+    </section>
+
+    <!-- New section: Additional Resources -->
+    <section class="mt-5">
+      <h2>Additional Resources</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><a href="https://sites.google.com/classrooms.management/view/" target="_blank">Google Site 1</a></li>
+        <li class="list-group-item"><a href="https://sites.google.com/classroom.center/view/home" target="_blank">Google Site 2</a></li>
+        <li class="list-group-item"><a href="https://sites.google.com/site/unblockedgame67/home" target="_blank">Google Site 3</a></li>
+        <li class="list-group-item"><a href="https://sites.google.com/site/unblockedgamestop" target="_blank">Google Site 4</a></li>
+        <li class="list-group-item"><a href="https://sites.google.com/site/unblockedwtf/games" target="_blank">Google Site 5</a></li>
+        <li class="list-group-item"><a href="https://www.youtube.com/watch?v=Aq5WXmQQooo" target="_blank">Google Site 6</a></li>
+        <li class="list-group-item"><a href="https://sites.google.com/classroom.center/view/" target="_blank">Backup Google Site (for #2)</a></li>
+      </ul>
+    </section>
+
+    <!-- New featured section -->
+    <section class="highlight mt-5 text-center">
+      <a href="https://dn.ht/picklecat/" target="_blank" class="btn btn-lg btn-warning">PCIKLE CAT</a>
+    </section>
+
   </main>
 
   <footer class="bg-dark text-white text-center py-4">
@@ -108,38 +145,7 @@
     </div>
   </footer>
 
-  <!-- Hidden Games Section – from the very start of our discussion -->
-  <div id="secret-games" style="display: none; margin: 40px auto; max-width: 800px; padding: 20px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px;">
-    <h4 class="text-muted">Quick Access (personal use only)</h4>
-    <p class="small text-muted">Original hubs and proxies — often lead to Slope, Retro Bowl, 1v1.LOL, BitLife, FNAF, Sandboxels, etc.</p>
-    <ul class="list-group mb-3">
-      <li class="list-group-item"><a href="https://class-76.github.io/" target="_blank">Class-76 Hub (classic unblocked collection)</a></li>
-      <li class="list-group-item"><a href="https://unblocked-2026.github.io/" target="_blank">Unblocked Games 2026</a></li>
-      <li class="list-group-item"><a href="https://unblocked-gamesforschool.github.io/" target="_blank">Unblocked Games for School</a></li>
-      <li class="list-group-item"><a href="https://chromebookunlocked.github.io/" target="_blank">Chromebook Unlocked Games</a></li>
-      <li class="list-group-item"><a href="https://git-hub-games.github.io/" target="_blank">Git-Hub Games Collection</a></li>
-      <li class="list-group-item"><a href="https://sz-games.github.io/" target="_blank">SZ Games (early popular hub)</a></li>
-    </ul>
-    <p class="small text-muted">These are external GitHub Pages sites — test on your network. If blocked, search for fresh forks or use proxies.</p>
-  </div>
-
-  <!-- Double-click reveal script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const trigger = document.getElementById('secret-trigger');
-      let lastClick = 0;
-
-      trigger.addEventListener('click', () => {
-        const now = new Date().getTime();
-        if (now - lastClick < 300) {  // double-click detection
-          document.getElementById('secret-games').style.display = 'block';
-          alert('Extras unlocked – scroll down!');
-        }
-        lastClick = now;
-      });
-    });
-  </script>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
