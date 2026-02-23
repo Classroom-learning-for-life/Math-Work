@@ -1,126 +1,50 @@
+/* Custom overrides and school-style enhancements */
+
 body {
-  margin: 0;
-  padding: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f7fa;
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa; /* light gray background */
+  color: #212529;
 }
 
-.hidden { display: none; }
+h1, h2, h3 {
+  font-weight: 700;
+}
 
-/* Lock screen – simple & clean */
-#lockScreen {
-  position: fixed;
-  inset: 0;
-  background: #e0e0e0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+.navbar {
+  border-bottom: 1px solid #dee2e6;
 }
-#lockScreen h2 {
-  margin-bottom: 20px;
-  color: #444;
+
+.navbar-brand {
+  color: #0d6efd !important;
+  font-size: 1.5rem;
 }
-#passwordInput, #revealPassword {
-  padding: 12px;
-  width: 240px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  margin-bottom: 12px;
+
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-#unlockBtn, #revealBtn {
-  padding: 10px 24px;
-  background: #5c8aff;
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-success:hover,
+.btn-outline-warning:hover {
   color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-#unlockBtn:hover, #revealBtn:hover {
-  background: #4a78e0;
-}
-#resetLogin {
-  margin-top: 16px;
-  color: #666;
-  cursor: pointer;
-  text-decoration: underline;
-  font-size: 0.9rem;
-}
-
-/* Main content */
-header {
-  text-align: center;
-  padding: 20px 0;
-}
-h1 {
-  font-size: 2.4rem;
-  color: #2c3e50;
-  margin-bottom: 8px;
-}
-h2, h3 {
-  color: #34495e;
-  margin: 20px 0 12px;
-}
-p {
-  font-size: 1.05rem;
-  color: #555;
-}
-
-section {
-  background: white;
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 700px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-li {
-  margin: 8px 0;
-}
-a {
-  color: #2c6ecc;
-  text-decoration: none;
-  font-size: 1.05rem;
-  padding: 6px 10px;
-  display: inline-block;
-  border-radius: 6px;
-  transition: background 0.2s;
-}
-a:hover {
-  background: #f0f4ff;
-}
-
-.reveal-section {
-  text-align: center;
-  margin: 20px 0;
-  padding: 15px;
-  background: #f9f9f9;
-  border-radius: 8px;
-}
-
-.highlight {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 1.3rem;
-}
-.highlight a {
-  color: #27ae60;
-  font-weight: bold;
 }
 
 footer {
-  text-align: center;
-  margin-top: 40px;
-  color: #777;
-  font-size: 0.9rem;
+  margin-top: 3rem;
 }
+
+/* Optional: subtle notebook/grid background (uncomment if you like) */
+/*
+body {
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+    url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80&w=1000');
+  background-size: cover;
+  background-attachment: fixed;
+}
+*/
